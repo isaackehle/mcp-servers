@@ -1,0 +1,7 @@
+# Git hooks (https://github.com/evilmartians/lefthook). Install once: lefthook install
+pre-commit:
+  commands:
+    rumdl:
+      glob: "*.md"
+      run: rumdl fmt --config .rumdl.toml {staged_files}
+      stage_fixed: true

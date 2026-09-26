@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "bionic-files": {
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "~/AI-Workspace"
+      ],
+      "command": "npx"
+    },
+    "brave-search": {
+      "args": [
+        "-y",
+        "@brave/brave-search-mcp-server",
+        "--transport",
+        "http"
+      ],
+      "command": "npx",
+      "env": {
+        "BRAVE_API_KEY": "${env.BRAVE_SEARCH_API_KEY}"
+      }
+    }
+  }
+}

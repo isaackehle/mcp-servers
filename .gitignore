@@ -1,0 +1,21 @@
+# Upstream clones: other people's repos with their own history (and, here, some
+# unpushed local edits). Recreate them with ./clone-upstreams.sh.
+/mcp-server-amazon/
+/monarch-mcp-server/
+/one-search-mcp/
+/synology-mcp/
+
+# Installed dependencies and build output
+node_modules/
+.venv/
+build/
+dist/
+
+# Secrets and local state: never publish
+.env
+.env.*
+!.env.example
+amazonCookies*.json
+*.log
+.crush/
+.DS_Store
