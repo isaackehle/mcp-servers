@@ -4,11 +4,11 @@ These act on your personal accounts. They stay as stdio servers on the machine t
 uses them, not in the `mcp` container, because that node has no authentication and
 anyone on the tailnet could call them.
 
-| Server | Why it stays local | Where it's configured |
-| --- | --- | --- |
-| Amazon account ([../mcp-server-amazon/](../mcp-server-amazon/), [rigwild/mcp-server-amazon](https://github.com/rigwild/mcp-server-amazon)) | Uses your Amazon session cookies (`amazonCookies.json`) to manage the cart and read orders. Its "place order" tool is documented as a demo, but the session is real. | Per client, stdio |
-| Monarch Money ([../monarch-mcp-server/](../monarch-mcp-server/), [robcerda/monarch-mcp-server](https://github.com/robcerda/monarch-mcp-server)) | Full read access to your finances. Login needs MFA, done once with `login_setup.py`, and the session is stored locally. | Per client, stdio |
-| 1Password (npm `mcp-1password`) | Vault access through the desktop app. | `~/.hermes/config.yaml` `mcp_servers.1password` (see [../index.md](../index.md)) |
+| Server                                                                                                                                          | Why it stays local                                                                                                                                                   | Where it's configured                                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Amazon account ([../mcp-server-amazon/](../mcp-server-amazon/), [rigwild/mcp-server-amazon](https://github.com/rigwild/mcp-server-amazon))      | Uses your Amazon session cookies (`amazonCookies.json`) to manage the cart and read orders. Its "place order" tool is documented as a demo, but the session is real. | Per client, stdio                                                                |
+| Monarch Money ([../monarch-mcp-server/](../monarch-mcp-server/), [robcerda/monarch-mcp-server](https://github.com/robcerda/monarch-mcp-server)) | Full read access to your finances. Login needs MFA, done once with `login_setup.py`, and the session is stored locally.                                              | Per client, stdio                                                                |
+| 1Password (npm `mcp-1password`)                                                                                                                 | Vault access through the desktop app.                                                                                                                                | `~/.hermes/config.yaml` `mcp_servers.1password` (see [../index.md](../index.md)) |
 
 ## Running them
 

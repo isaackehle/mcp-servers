@@ -9,12 +9,12 @@
 
 Two different projects, not forks of each other:
 
-| | [`lefty3382/synology-mcp`](https://github.com/lefty3382/synology-mcp) | [`atom2ueki/mcp-server-synology`](https://github.com/atom2ueki/mcp-server-synology), the clone in [../synology-mcp/](../synology-mcp/) |
-| --- | --- | --- |
-| Does | NAS health, storage and system monitoring | File management, downloads, system operations |
-| Writes to the NAS | Only above the `health` tier | Yes, by design |
-| Transport | HTTP on `MCP_PORT`: no bridge needed | stdio (its `docker-compose.http.yml` adds `mcp-proxy`) |
-| In the container | **Yes**: image `ghcr.io/lefty3382/synology-mcp:latest`, `MCP_PERMISSION_TIER=health` | Not yet |
+|                   | [`lefty3382/synology-mcp`](https://github.com/lefty3382/synology-mcp)                | [`atom2ueki/mcp-server-synology`](https://github.com/atom2ueki/mcp-server-synology), the clone in [../synology-mcp/](../synology-mcp/) |
+| ----------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Does              | NAS health, storage and system monitoring                                            | File management, downloads, system operations                                                                                          |
+| Writes to the NAS | Only above the `health` tier                                                         | Yes, by design                                                                                                                         |
+| Transport         | HTTP on `MCP_PORT`: no bridge needed                                                 | stdio (its `docker-compose.http.yml` adds `mcp-proxy`)                                                                                 |
+| In the container  | **Yes**: image `ghcr.io/lefty3382/synology-mcp:latest`, `MCP_PERMISSION_TIER=health` | Not yet                                                                                                                                |
 
 The deployed one is `lefty3382` at the `health` tier: read-mostly, so it's safe on an
 unauthenticated node.
