@@ -27,8 +27,8 @@ unauthenticated node.
     container_name: mcp-synology
     network_mode: service:tailscale
     environment:
-      - SYNOLOGY_TANK_HOST=${SYNOLOGY_HOST}          # nas.<tailnet>.ts.net
-      - SYNOLOGY_TANK_PORT=${SYNOLOGY_PORT}          # 5001
+      - SYNOLOGY_TANK_HOST=${SYNOLOGY_HOST}          # NAS LAN IP, not nas.<tailnet> (see below)
+      - SYNOLOGY_TANK_PORT=${SYNOLOGY_PORT}          # DSM HTTPS port: 5001 unless you moved it
       - SYNOLOGY_TANK_USERNAME=${SYNOLOGY_USERNAME}
       - SYNOLOGY_TANK_PASSWORD=${SYNOLOGY_PASSWORD}
       - MCP_PORT=8485
@@ -36,6 +36,17 @@ unauthenticated node.
 ```
 
 Serve handler: `"/synology": { "Proxy": "http://127.0.0.1:8485" }`.
+
+**Use the NAS's LAN IP for `SYNOLOGY_HOST`, not its tailnet name.** The `mcp` sidecar runs
+Tailscale in userspace mode, so containers sharing its namespace get no MagicDNS and no
+tailnet routes: `nas.<tailnet>` never resolves, `list_nas` shows `connected: false`, and every
+tool returns `{}`. The server skips TLS verification, so DSM's certificate not matching the IP
+is fine.
+
+**Port:** DSM's defaults are 5000 (HTTP) and 5001 (HTTPS). DSM's Security Advisor
+recommends moving them (Control Panel → Login Portal → DSM tab). If you have, keep the
+real numbers out of any repo: set `DSM_HTTPS_PORT` in `~/.env`; the iac repo's
+`mcp/.env.example` reads it as `SYNOLOGY_PORT=${DSM_HTTPS_PORT:-5001}`.
 
 **DSM account:** use a dedicated DSM user with only the permissions the tier needs,
 not an admin.
