@@ -24,7 +24,7 @@ A catalog of the MCP servers I use or plan to, and how each one runs: either as 
 | Synology DSM (**deployed**) | [lefty3382/synology-mcp](https://github.com/lefty3382/synology-mcp)                                                      | `/synology`, 8485        | DSM user and password                                                  | [docs/synology.md](docs/synology.md)               |
 | Web search (one-search)     | npm `one-search-mcp` ([yokingma/one-search-mcp](https://github.com/yokingma/one-search-mcp))                             | `/search`, 8486          | Nothing for DuckDuckGo; a SearXNG URL or Tavily key for better results | [docs/one-search.md](docs/one-search.md)           |
 | Weather                     | npm `@dangahagan/weather-mcp` ([servers/](servers/))                                                                     | `/weather`, 8487         | Nothing                                                                | [docs/weather.md](docs/weather.md)                 |
-| Tailscale admin             | [tailscale/](tailscale/) (my own)                                                                                        | `/tailscale`, 8488       | Tailscale API key, read-only if possible                               | [docs/tailscale.md](docs/tailscale.md)             |
+| Tailscale admin             | iac `mcp/servers/tailscale/` (my own)                                                                                    | `/tailscale`, 8488       | OAuth client, read scopes (or API key)                                 | [docs/tailscale.md](docs/tailscale.md)             |
 | Amazon product data         | npm `@pullapi/amazon-scraper-mcp` ([amazon-scraper/](amazon-scraper/))                                                   | `/amazon-products`, 8489 | RapidAPI key (paid)                                                    | [docs/amazon-scraper.md](docs/amazon-scraper.md)   |
 | Time and time zones         | PyPI `mcp-server-time` ([modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers))                 | `/time`, 8490            | Nothing                                                                | [plugin-recipe.md](docs/plugin-recipe.md) (Python) |
 | Brave Search                | npm `@brave/brave-search-mcp-server` ([brave/brave-search-mcp-server](https://github.com/brave/brave-search-mcp-server)) | `/brave`, 8491           | `BRAVE_API_KEY` (free tier)                                            | [plugin-recipe.md](docs/plugin-recipe.md) (Node)   |
@@ -129,7 +129,7 @@ Review these before trusting them: they'd hold credentials to your infrastructur
 - **Pi-hole:** several, e.g. `hexamatic/pihole-mcp`, which ships a container image.
 - **Frigate:** `mrfentmen/frigate-mcp`.
 - **zigbee2mqtt:** `alexpfau/zigbee2mqtt-mcp`.
-- **Tailscale:** `YawLabs/tailscale-mcp`, an alternative to [tailscale/](tailscale/).
+- **Tailscale:** `YawLabs/tailscale-mcp`, an alternative to the iac `mcp/servers/tailscale/` server.
 
 Nothing credible found for Syncthing, Plex, LM Studio or NotePlan.
 
