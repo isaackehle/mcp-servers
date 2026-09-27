@@ -165,3 +165,8 @@ Nothing credible found for Syncthing, Plex, LM Studio or NotePlan.
   - [Testing CLI shell plugins](https://www.1password.dev/cli/shell-plugins/test)
 - **Roundups:**
   [10 best free MCP servers for developers in 2026](https://medium.com/syntest/10-best-free-mcp-servers-for-developers-in-2026-20bd96314f4b)
+
+## License
+
+[MIT](LICENSE), for the files in this repo (docs, recipes, wrappers and scripts). The upstream
+MCP servers are not included: `clone-upstreams.sh` fetches them, and each keeps its own license.
