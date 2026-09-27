@@ -20,11 +20,11 @@ needs its own port. The next free one is in the [catalog](../README.md#catalog).
 
 ## 1. Pick the bridge
 
-| Server language | Bridge | Why |
-| --- | --- | --- |
-| Node (npm package) | [`supergateway`](https://www.npmjs.com/package/supergateway) 4.x | Node only, so the image is `node:22-alpine` and nothing else |
-| Python | [`mcp-proxy`](https://github.com/sparfenyuk/mcp-proxy) with `mcp<1.20` | Python only, so the image is `python:3.12-alpine`. The pin is needed: newer `mcp` breaks `mcp-proxy`'s import (2026-09-26). |
-| Already serves HTTP | none | Run it on its port directly (e.g. Synology) |
+| Server language     | Bridge                                                                 | Why                                                                                                                         |
+| ------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Node (npm package)  | [`supergateway`](https://www.npmjs.com/package/supergateway) 4.x       | Node only, so the image is `node:22-alpine` and nothing else                                                                |
+| Python              | [`mcp-proxy`](https://github.com/sparfenyuk/mcp-proxy) with `mcp<1.20` | Python only, so the image is `python:3.12-alpine`. The pin is needed: newer `mcp` breaks `mcp-proxy`'s import (2026-09-26). |
+| Already serves HTTP | none                                                                   | Run it on its port directly (e.g. Synology)                                                                                 |
 
 Both bridges serve streamable HTTP at `/mcp`.
 

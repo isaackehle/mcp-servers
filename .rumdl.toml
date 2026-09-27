@@ -32,3 +32,8 @@ style = "consistent"
 [MD013]
 line-length = 120
 reflow = true
+
+# Tables: aligned columns, so they read well as plain text (rumdl fmt fixes them)
+[MD060]
+enabled = true
+style = "aligned"

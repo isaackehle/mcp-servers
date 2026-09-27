@@ -12,12 +12,12 @@
 Web search, crawl and extract, across several backends, picked with
 `SEARCH_PROVIDER`:
 
-| Provider | Needs | Notes |
-| --- | --- | --- |
-| `duckduckgo` | nothing | Simplest; fine to start with. |
-| `searxng` | `SEARCH_API_URL` of a SearXNG instance | Best for privacy and volume. SearXNG could be its own iac stack. |
-| `tavily` | `SEARCH_API_KEY` | Paid, good quality. |
-| local browser search and scraping | a Chromium browser (`agent-browser`) | **Won't work on Alpine as-is.** Use the upstream [Dockerfile](../one-search-mcp/Dockerfile), or skip those tools. |
+| Provider                          | Needs                                  | Notes                                                                                                             |
+| --------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `duckduckgo`                      | nothing                                | Simplest; fine to start with.                                                                                     |
+| `searxng`                         | `SEARCH_API_URL` of a SearXNG instance | Best for privacy and volume. SearXNG could be its own iac stack.                                                  |
+| `tavily`                          | `SEARCH_API_KEY`                       | Paid, good quality.                                                                                               |
+| local browser search and scraping | a Chromium browser (`agent-browser`)   | **Won't work on Alpine as-is.** Use the upstream [Dockerfile](../one-search-mcp/Dockerfile), or skip those tools. |
 
 Other settings: `LIMIT`, `LANGUAGE`, `SAFE_SEARCH`, `TIME_RANGE`, `TIMEOUT` (see its
 README).

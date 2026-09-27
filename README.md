@@ -41,13 +41,13 @@ A catalog of the MCP servers I use or plan to, and how each one runs: either as 
 These act on personal accounts or local files, so they run as stdio servers on the
 machine that uses them. See [docs/local-only.md](docs/local-only.md).
 
-| Server                        | Source                                                                                         | Why it stays local                                                          |
-| ----------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Amazon account (cart, orders) | [rigwild/mcp-server-amazon](https://github.com/rigwild/mcp-server-amazon) ([amazon/](amazon/)) | Uses your Amazon session cookies                                            |
-| Monarch Money                 | [robcerda/monarch-mcp-server](https://github.com/robcerda/monarch-mcp-server)                  | Full access to your finances; MFA login                                     |
-| 1Password                     | npm `mcp-1password`                                                                            | Vault access through the desktop app ([index.md](index.md) has its setup)   |
-| Filesystem                    | npm `@modelcontextprotocol/server-filesystem`                                                  | Reads and writes a local folder (LM Studio uses it: [mcp.jsonc](mcp.jsonc)) |
-| LiteLLM admin (LiteAdmin) | [BerriAI/litellm-admin-mcp](https://github.com/BerriAI/litellm-admin-mcp), [docs](https://docs.litellm.ai/docs/proxy/liteadmin_mcp) | Needs a proxy-admin key. Use it for keys, teams, budgets and spend; add models through your own config, not through it. New (v0.1.0, 2026-09): pin the version. |
+| Server                        | Source                                                                                                                              | Why it stays local                                                                                                                                              |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Amazon account (cart, orders) | [rigwild/mcp-server-amazon](https://github.com/rigwild/mcp-server-amazon) ([amazon/](amazon/))                                      | Uses your Amazon session cookies                                                                                                                                |
+| Monarch Money                 | [robcerda/monarch-mcp-server](https://github.com/robcerda/monarch-mcp-server)                                                       | Full access to your finances; MFA login                                                                                                                         |
+| 1Password                     | npm `mcp-1password`                                                                                                                 | Vault access through the desktop app ([index.md](index.md) has its setup)                                                                                       |
+| Filesystem                    | npm `@modelcontextprotocol/server-filesystem`                                                                                       | Reads and writes a local folder (LM Studio uses it: [mcp.jsonc](mcp.jsonc))                                                                                     |
+| LiteLLM admin (LiteAdmin)     | [BerriAI/litellm-admin-mcp](https://github.com/BerriAI/litellm-admin-mcp), [docs](https://docs.litellm.ai/docs/proxy/liteadmin_mcp) | Needs a proxy-admin key. Use it for keys, teams, budgets and spend; add models through your own config, not through it. New (v0.1.0, 2026-09): pin the version. |
 
 ### Hosted by the provider
 
