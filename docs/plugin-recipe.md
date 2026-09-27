@@ -93,6 +93,7 @@ to `iac/iac-secrets.env` (a 1Password `op://` reference is fine).
 ```shell
 cd ~/code/isaackehle/iac
 scripts/gen-env.sh mcp && git push
+scripts/deploy.sh dirs mcp nas           # first deploy only: Portainer won't create bind-mount folders
 scripts/deploy.sh extras mcp nas         # the re-rendered serve.json
 # Portainer: Stacks → mcp → Pull and redeploy (rebuilds changed images)
 curl -s https://mcp.<tailnet>.ts.net/    # the server list
