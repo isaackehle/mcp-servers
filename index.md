@@ -24,5 +24,4 @@
 
 - Image: `isaackehle/tailscale-mcp:latest`
 - Requires `TAILSCALE_API_KEY` env var
-
-@hexsleeves/tailscale-mcp-server
+  @hexsleeves/tailscale-mcp-server
